@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isaac Marquez – Portfolio</title>
+  <meta name="description" content="Portfolio of Isaac Marquez – MSBA @ USC Marshall. Finance & analytics projects, resume, and contact." />
+  <!-- Open Graph for rich link previews -->
+  <meta property="og:title" content="Isaac Marquez – Portfolio" />
+  <meta property="og:description" content="Finance & Analytics • Fixed Income • Python/SQL • USC MSBA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="headshot.jpg" />
+  <meta property="og:url" content="https://Isaac-Marquez.github.io" />
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121826;
+      --muted: #8aa4c4;
+      --text: #e6edf3;
+      --brand: #63b3ff;
+      --accent: #70e1a1;
+      --ring: rgba(99,179,255,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center; padding: 32px 0 8px; }
+    header img { width: 140px; aspect-ratio: 1; border-radius: 20px; object-fit: cover; border: 1px solid #22324a; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+    .name { font-size: clamp(24px, 3vw, 36px); font-weight: 800; letter-spacing: .3px; }
+    .subtitle { color: var(--muted); margin-top: 4px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 12px; }
+    nav a { padding: 8px 12px; background: #0f1522; border: 1px solid #1f2a40; border-radius: 999px; transition: transform .08s ease; }
+    nav a:hover { transform: translateY(-1px); }
+
+    .section { margin: 28px 0; }
+    .card { background: var(--card); border: 1px solid #1c263a; border-radius: 20px; padding: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    .section h2 { margin: 0 0 12px; font-size: 20px; letter-spacing: .2px; }
+    .muted { color: var(--muted); }
+
+    .quote { font-size: 18px; padding: 18px 20px; background: #0f1522; border: 1px dashed #24314a; border-radius: 16px; }
+
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 800px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+
+    .project {
+      display: grid; gap: 8px; padding: 16px; border: 1px solid #2a3957; border-radius: 16px; background: #0f1522;
+    }
+    .project h3 { margin: 0; font-size: 18px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-size: 12px; padding: 4px 8px; border: 1px solid #30405f; border-radius: 999px; color: var(--muted); background: #0b1320; }
+
+    .list { display: grid; gap: 10px; }
+
+    .contact {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid #2a3957; background: #0f1522; }
+    .btn:hover { filter: brightness(1.05); }
+
+    footer { color: var(--muted); font-size: 14px; padding: 28px 0 8px; text-align: center; }
+
+    /* Focus styles */
+    :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Replace headshot.jpg with your file name. Put the image in the repo root. -->
+      <img src="headshot.jpg" alt="Professional headshot of Isaac Marquez" />
+      <div>
+        <div class="name">Isaac Marquez</div>
+        <div class="subtitle">MSBA @ USC Marshall • Finance & Analytics • Fixed Income • Python | SQL</div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#writing">Summaries & Quotes</a>
+          <a href="#contact">Contact</a>
+          <a href="Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="card">
+        <h2>About</h2>
+        <p>
+          I'm an analytics‑driven problem solver with a finance backbone—currently pursuing my M.S. in Business Analytics at USC Marshall. I enjoy building data products and research that connect macro context to portfolio decisions across fixed income markets. Recent work includes a portfolio optimizer (variance‑covariance) and pricing models for case competitions.
+        </p>
+        <div class="quote" aria-label="Professional motto">
+          “Where comfort dies, growth begins.”
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="card">
+        <h2>Projects</h2>
+        <div class="grid cols-2" id="projectGrid">
+          <!-- Projects will be injected by JS below. Edit the projects array. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARIES & QUOTES / WRITING -->
+    <section id="writing" class="section">
+      <div class="card">
+        <h2>Summaries & Quotes</h2>
+        <div class="list" id="writingList">
+          <!-- Add brief write‑ups, study notes, or professional quotes. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="card">
+        <h2>Contact</h2>
+        <div class="contact">
+          <a class="btn" href="mailto:Isaac.Marquez.2026@marshall.usc.edu">Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/isaac-hernandez-marquez" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/Isaac-Marquez" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="muted" style="margin-top:10px">Tip: replace links above and add <code>Resume.pdf</code> to your repo for the Resume button.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Isaac Marquez • Built on GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    // ---- Quick edit section: update these arrays/fields only ----
+    const PROJECTS = [
+      {
+        title: "CFA Institute Research Competition (Report)",
+        url: "CFA_Research_Competition.pdf",
+        blurb: "Equity research report submitted for the CFA Institute Research Challenge; valuation, industry analysis, and investment thesis.",
+        tags: ["Equity Research", "Valuation", "Report", "PDF"]
+      },
+      {
+        title: "CFAOC SMIF Competition @ PIMCO HQ",
+        url: "CFAOC_SMIF_Competition.pdf",
+        blurb: "Team presentation delivered at PIMCO HQ; portfolio construction, risk management, and performance attribution.",
+        tags: ["Portfolio", "Fixed Income", "Presentation", "PDF"]
+      },
+      {
+        title: "Portfolio Optimizer (Fixed Income)",
+        url: "https://github.com/Isaac-Marquez/PortfolioOptimizer",
+        blurb: "Variance–covariance model to optimize allocation (AGG, SPTL, MBB, SGOV) with stress tests and duration targets.",
+        tags: ["Python", "Pandas", "Optimization", "Fixed Income"]
+      },
+      {
+        title: "StayShare Pricing Case",
+        url: "https://github.com/Isaac-Marquez/StayShare-Case",
+        blurb: "Algorithmic pricing for short‑term rentals using demand features and revenue uplift analysis.",
+        tags: ["Python", "Regression", "EDA", "Case Study"]
+      },
+      {
+        title: "SQL Analytics – Northwind",
+        url: "https://github.com/Isaac-Marquez/sql-northwind-analytics",
+        blurb: "Join logic, cohorting, and revenue KPIs on the Northwind dataset.",
+        tags: ["SQL", "PostgreSQL", "Analytics"]
+      },
+      {
+        title: "Beatles Analytics Notes",
+        url: "https://github.com/Isaac-Marquez/beatles-notes",
+        blurb: "Writing samples & brief summaries from a music/culture course—structured like bite‑size blog posts.",
+        tags: ["Writing", "Notes", "Summaries"]
+      }
+    ];
+
+    const WRITING = [
+      {
+        title: "Professional Motto",
+        text: "Turning data into decisions—one analysis at a time.",
+      },
+      {
+        title: "Study Summary – Duration & Convexity",
+        text: "Quick reference on how small yield changes affect price, with examples across IG credit and MBS.",
+      },
+      {
+        title: "Quote",
+        text: "\u201cDiscipline equals freedom.\u201d — Jocko Willink",
+      }
+    ];
+    // ------------------------------------------------------------
+
+    function renderProjects() {
+      const grid = document.getElementById('projectGrid');
+      grid.innerHTML = PROJECTS.map(p => `
+        <article class="project">
+          <h3><a href="${p.url}" target="_blank" rel="noopener">${p.title} ↗</a></h3>
+          <p class="muted">${p.blurb}</p>
+          <div class="tags">${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        </article>
+      `).join('');
+    }
+
+    function renderWriting() {
+      const list = document.getElementById('writingList');
+      list.innerHTML = WRITING.map(w => `
+        <article class="project" aria-label="entry">
+          <h3>${w.title}</h3>
+          <p>${w.text}</p>
+        </article>
+      `).join('');
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderProjects();
+    renderWriting();
+  </script>
+</body>
+</html>
